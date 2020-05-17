@@ -1,3 +1,20 @@
+# 0. Top conferences in Natural Language Processing
+- [*dblp: computer science bibliography](https://dblp.uni-trier.de/db/conf/)
+
+- [ACL: Association for Computational Linguistics](https://www.aclweb.org/portal/acl)
+- [EMNLP: Empirical Methods in Natural Language Processing](https://www.aclweb.org/portal/emnlp)
+- [NAACL: North American Chapter of the Association for Computational Linguistics](http://naacl.org/)
+- [EACL: European Chapter of the Association for Computational Linguistics](http://www.eacl.org/)
+- [COLING: International Conference on Computational Linguistics](https://coling2020.org/)
+- [CoNLL: Conference on Natural Language Learning](https://www.conll.org/)
+
+- [ICML: International Conference on Machine Learning](https://icml.cc/)
+- [NeurIPS: Neural Information Processing Systems](https://nips.cc/)
+- [AAAI: Association for the Advancement of Artificial Intelligence](https://www.aaai.org/)
+- [SIGIR: Special Interest Group on Information Retrieval](http://sigir.org/)
+- [LREC: Language Resources and Evaluation](http://lrec-conf.org/)
+
+
 # 1. Overview of NLP Tasks
 
 总体而言，**自然语言处理**（Natural Language Processing）应涉及所有以人类的**语音**和**文字**为处理对象的研究，但是此处我们仅考虑针对**文本处理**的研究内容。
@@ -140,7 +157,14 @@ hypothesis: A person is training his horse for a competition. (neutral)
  
  **Drawbacks**: The same token must have the same embedding. 即无法解决**一词多义**问题，因为没有考虑语境。
  
- - 
+ Here comes the contextualized word embedding: LSTM, Self-attention layers, etc.
+ 
+ - Transformer ([Vaswani, et al., NIPS'17](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf))
+ - BERT ([Devlin, et al., arXiv'18](https://arxiv.org/pdf/1810.04805.pdf?source=post_elevate_sequence_page---------------------------))
+ - Distill BERT ([Sanh, et al., NeurIPS workshop'19](https://arxiv.org/pdf/1910.01108))
+ - Tiny BERT ([Jian, et al., arXiv'19](https://arxiv.org/pdf/1909.10351))
+ - Mobile BERT ([Sun, et al., ACL'20](https://arxiv.org/pdf/2004.02984))
+ - ALBERT ([Lan, et al., ICLR'20](https://arxiv.org/pdf/1909.11942))
  
  ## 2.2 How to fine-tune
  ## 2.3 How to pre-train
