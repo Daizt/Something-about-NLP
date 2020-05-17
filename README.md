@@ -124,10 +124,26 @@ hypothesis: A person is training his horse for a competition. (neutral)
   - [Super GLUE Website](https://super.gluebenchmark.com/)
   - [Chinese Version](https://www.cluebenchmarks.com/)
   
+  
 - DecaNLP
 
   The **Natural Language Decathlon (decaNLP)** is a new benchmark for studying general NLP models that can perform a variety of complex, natural language tasks. By requiring a single system to perform **ten disparate natural language tasks**, decaNLP offers a unique setting for multitask, transfer, and continual learning.
   - [DecaNLP Website](http://decanlp.com/)
+  
+ 
+ # 2. BERT and its family
+ ## 2.1 What is pre-train model
+ Use the model to represent each token by a **embedding vector**. 
+ - Word2vec ([Mikolov, et al., NIPS'13](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf))
+ - Glove ([Pennington, et al., EMNLP’14](https://www.aclweb.org/anthology/D14-1162.pdf))
+ - FastText ([Bojanowski, et al., TACL’17](https://www.mitpressjournals.org/doi/pdfplus/10.1162/tacl_a_00051?source=post_page---------------------------&))
+ 
+ **Drawbacks**: The same token must have the same embedding. 即无法解决**一词多义**问题，因为没有考虑语境。
+ 
+ - 
+ 
+ ## 2.2 How to fine-tune
+ ## 2.3 How to pre-train
 
 
 
