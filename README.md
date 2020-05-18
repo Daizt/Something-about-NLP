@@ -23,8 +23,6 @@
   <img width="800" height="600" src="./images/general-tasks.jpg">
 </p>
 
-Source from: [Deep learning course by Hung-yi Lee](http://speech.ee.ntu.edu.tw/~tlkagk/courses/DLHLP20/TaskShort%20(v9).pdf)
-
 ## 1.1 Part-of-Speech Tagging (POS)
 - `Input`: Sequence.
 - `output`: Class for each token.
@@ -188,12 +186,10 @@ Output: One class, Class for each token, Copy from input, General sequence.
 ```
 - `Input`为One sentence or Multiple sentences
 One sentence的情况不必多说，直接输入pre-trained model即可；对于Multiple sentences的情况，可以采用特殊符号连接多组句子然后输入到模型当中：
-
 <p align="center">
   <img width="400" height="200" src="./images/multi-sentence-input.jpg">
 </p>
 
-(Source from: [Deep learning course by Hung-yi Lee](http://speech.ee.ntu.edu.tw/~tlkagk/courses/DLHLP20/BERT%20train%20(v8).pdf))
 
 
 
