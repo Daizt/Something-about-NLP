@@ -1,4 +1,4 @@
-# 0. Top conferences in Natural Language Processing
+# 0. Top conferences in NLP
 - [*dblp: computer science bibliography](https://dblp.uni-trier.de/db/conf/)
 
 - [ACL: Association for Computational Linguistics](https://www.aclweb.org/portal/acl)
@@ -14,17 +14,14 @@
 - [SIGIR: Special Interest Group on Information Retrieval](http://sigir.org/)
 - [LREC: Language Resources and Evaluation](http://lrec-conf.org/)
 
-
 # 1. Overview of NLP Tasks
 
 总体而言，**自然语言处理**（Natural Language Processing）应涉及所有以人类的**语音**和**文字**为处理对象的研究，但是此处我们仅考虑针对**文本处理**的研究内容。
 
 根据语言模型输入和输出类型的不同，现有的NLP 任务大致可以分为以下类别：
-
 <p align="center">
   <img width="800" height="600" src="./images/general-tasks.jpg">
 </p>
-
 (Source from: [Deep learning course by Hung-yi Lee](http://speech.ee.ntu.edu.tw/~tlkagk/courses/DLHLP20/TaskShort%20(v9).pdf))
 
 ## 1.1 Part-of-Speech Tagging (POS)
