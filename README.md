@@ -182,13 +182,19 @@ But the models are too big!! Thus researchers have tried many ways to **compress
 Input: One sentence, Multiple sentences.
 ```
 ```
-Output: One class, Class for each token, Copy from input, General sequence.
+Output: One class, Class for each token, General sequence.
 ```
-- `Input`为One sentence or Multiple sentences
-One sentence的情况不必多说，直接输入pre-trained model即可；对于Multiple sentences的情况，可以采用特殊符号连接多组句子然后输入到模型当中：
+- `Input`: One sentence or Multiple sentences
+
+  One sentence的情况不必多说，直接输入pre-trained model即可；对于Multiple sentences的情况，可以采用特殊符号连接多组句子然后输入到模型当中：
+  
 <p align="center">
-  <img width="400" height="200" src="./images/multi-sentence-input.jpg">
+  <img width="400" height="180" src="./images/multi-sentence-input.jpg">
 </p>
+
+- `Output`: One class
+  
+  
 
 
 
