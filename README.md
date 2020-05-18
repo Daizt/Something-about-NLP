@@ -21,7 +21,9 @@
 
 根据语言模型输入和输出类型的不同，现有的NLP 任务大致可以分为以下类别：
 
-<img src="./images/general%20tasks.jpg" width="800px" height="600px" />
+<p align="center">
+  <img width="800" height="600" src="./images/general-tasks.jpg">
+</p>
 
 (Source from: [Deep learning course by Hung-yi Lee](http://speech.ee.ntu.edu.tw/~tlkagk/courses/DLHLP20/TaskShort%20(v9).pdf))
 
