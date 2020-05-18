@@ -193,6 +193,40 @@ Output: One class, Class for each token, General sequence.
 </p>
 
 - `Output`: One class
+
+  当输出为one class时，可以在input sequence首位加入一个特殊token用以“告诉”model输出一个考虑整个input sequence的embedded vector，然后将其作为task specific layer的输入最终输出一个class；还可以直接将所有的embedded vector直接作为task specific layer的输入，然后得到一个class结果。
+
+<p align="center">
+  <img width="300" height="300" src="./images/output-one-class.jpg">
+</p>
+
+- `Output`: Class for each token
+
+  当需要为每一个token输出一个class时做法也非常直觉，将所有的embedded vector直接输入到下一层task specific layer（可以为RNN等）即可。
+  
+<p align="center">
+  <img width="260" height="310" src="./images/output-class-for-each-token.jpg">
+</p>
+
+- `Output`: General Sequence
+
+  当输出为sequence时，可以直接将pre-trained model看作是encoder，然后再连接一个decoder以实现seq2seq模型。
+  
+<p align="center">
+  <img width="500" height="240" src="./images/output-general-sequence-1.jpg">
+</p>
+
+- `Output`: General Sequence
+
+  还有一种做法是直接将pre-trained model当作decoder来用。此时我们在input sequence后添加一个特殊token，然  后将该特殊token对应的embedded vector输入到task specific layer中得到第一个输出token，接下来按照decoder的用法将输出的token再次输入到pre-trained model中以获得后续的output token，直到出现`<EOS>`为止。
+  
+<p align="center">
+  <img width="500" height="330" src="./images/output-general-sequence-2.jpg">
+</p>
+
+在根据输入、输出格式设计好整体模型架构后，便可以在新的数据集上进行fine-tune。
+
+  
   
   
 
