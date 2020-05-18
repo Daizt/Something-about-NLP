@@ -160,7 +160,16 @@ So here comes the **contextualized** word embedding:
  
 - Transformer ([Vaswani, et al., NIPS'17](https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf))
 - BERT ([Devlin, et al., arXiv'18](https://arxiv.org/pdf/1810.04805.pdf?source=post_elevate_sequence_page---------------------------))
-- Elmo XXXXX
+- ELMO ([Peters, et al., NAACL'18](https://arxiv.org/pdf/1802.05365.pdf%E3%80%91))
+- ERNIE ([Sun, et al., ACL'19](https://arxiv.org/pdf/1904.09223))
+- XLNet ([Yang, et al., NeurIPS'19](https://papers.nips.cc/paper/8812-xlnet-generalized-autoregressive-pretraining-for-language-understanding.pdf))
+- MASS ([Song, et al., ICML'19](https://arxiv.org/pdf/1905.02450))
+- BART ([Lewis, et al., arXiv'19](https://arxiv.org/pdf/1910.13461))
+- UniLM ([Dong, et al., NeurIPS'19](https://papers.nips.cc/paper/9464-unified-language-model-pre-training-for-natural-language-understanding-and-generation.pdf))
+- RoBERTa ([Liu, et al., arXiv'19](https://arxiv.org/pdf/1907.11692))
+- structBERT ([Want, et al., ICLR'20](https://arxiv.org/pdf/1908.04577))
+- GPT ([Alec, et al., 2018](https://www.cs.ubc.ca/~amuham01/LING530/papers/radford2018improving.pdf))
+- GPT-2 ([Alec, et al., 2019](https://www.ceid.upatras.gr/webpages/faculty/zaro/teaching/alg-ds/PRESENTATIONS/PAPERS/2019-Radford-et-al_Language-Models-Are-Unsupervised-Multitask-%20Learners.pdf))
  
 But the models are too big!! Thus researchers have tried many ways to **compress** them:
  
@@ -174,8 +183,17 @@ But the models are too big!! Thus researchers have tried many ways to **compress
 - Longformer ([Beltagy, et al., arXiv'20](https://arxiv.org/pdf/2004.05150))
  
 ## 2.2 How to pre-train
- 
- 
+- Pre-training by Translation
+
+  通过使模型（encoder）参与翻译任务来达到预训练的目的，缺点是需要大量的sentence pairs。
+
+- Pre-training by Predicting next token
+
+  这种预训练方式不需要大量的标注数据，只需要机器根据输入句子中的**其它token**预测下一个token即可。
+  
+  - 可以只根据待预测token**之前**的内容进行预训练
+  - 可以同时参考待预测token**前后**的内容进行预训练，如BERT，ELMO的做法
+   
 ## 2.3 Transfer & Fine-tune
 当获得了预训练模型后，我们可以在此基础上添加一些Task-specific Layer来获得适用于场景的模型。具体而言，NLP任务的输入、输出类型大体有以下类别：
 ```
@@ -224,7 +242,9 @@ Output: One class, Class for each token, General sequence.
   <img width="500" height="330" src="./images/output-general-sequence-2.jpg">
 </p>
 
-在根据输入、输出格式设计好整体模型架构后，便可以在新的数据集上进行fine-tune。
+在根据输入、输出格式设计好整体模型架构后，便可以在新的数据集上进行fine-tune。具体而言，可以固定pre-trained model参数不变而只更新task specific layer，也可以二者一起更新。对于pre-trained model同步更新的训练方式，由于任务种类繁多且预训练模型本身巨大，所以该训练方式必然需要存储多组预训练模型的参数。为解决这一问题，研究者又提出了Adapter的思路。
+ - [Stickland, et al., ICML'19](https://arxiv.org/pdf/1902.02671) 
+ - [Houlsby, et al., ICML’19](https://arxiv.org/pdf/1902.00751.pdf?source=post_page---------------------------)
 
   
   
