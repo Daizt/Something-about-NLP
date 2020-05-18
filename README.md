@@ -191,7 +191,7 @@ One sentence的情况不必多说，直接输入pre-trained model即可；对于
 <p align="center">
   <img width="400" height="200" src="./images/multi-sentence-input.jpg">
 </p>
-
+(Source from: [Deep learning course by Hung-yi Lee](http://speech.ee.ntu.edu.tw/~tlkagk/courses/DLHLP20/BERT%20train%20(v8).pdf))
 
 
 
