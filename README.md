@@ -148,8 +148,10 @@ hypothesis: A person is training his horse for a competition. (neutral)
   
 
 # 2. BERT and its family
-## 2.1 The pre-train model
+## 2.1 The pre-trained model
 Use the model to represent each token by a **embedding vector**. 
+At first, we have **uncontextualized** word embedding:
+
 - Word2vec ([Mikolov, et al., NIPS'13](https://papers.nips.cc/paper/5021-distributed-representations-of-words-and-phrases-and-their-compositionality.pdf))
 - Glove ([Pennington, et al., EMNLP’14](https://www.aclweb.org/anthology/D14-1162.pdf))
 - FastText ([Bojanowski, et al., TACL’17](https://www.mitpressjournals.org/doi/pdfplus/10.1162/tacl_a_00051?source=post_page---------------------------&))
